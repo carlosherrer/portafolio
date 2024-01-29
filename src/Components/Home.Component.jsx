@@ -4,13 +4,12 @@ import React, { useEffect, useState } from 'react';
 const HomeComponent = () => {
   const [displayText, setDisplayText] = useState(['', '', '']);
 
-  useEffect(() => {
+  const startTypingAnimation = () => {
     const typingSpeed = 90;
+    const text = ['👨‍💻💁 ¡Hola!, soy', 'Carlos 😎', '<> Desarrollador Web </>'];
+    const displayLines = text.map(() => ({ displayContent: '' }));
+
     const timeouts = [];
-
-    const text = ['👨‍💻💁 ¡Hola!, soy', 'Carlos 😎', '<>Desarrollador Web</>'];
-
-    const displayLines = text.map((line) => ({ content: line, displayContent: '' }));
 
     text.forEach((line, lineIndex) => {
       [...line].forEach((char, charIndex) => {
@@ -23,8 +22,21 @@ const HomeComponent = () => {
       });
     });
 
+    timeouts.push(
+      setTimeout(() => {
+        setDisplayText(['', '', '', '', '', '']); // Reiniciar el texto después de un intervalo
+        startTypingAnimation(); // Iniciar la animación nuevamente
+      }, typingSpeed * text.reduce((acc, line) => acc + line.length, 0) + 1000) // Intervalo de 1 segundo después de completar la animación
+    );
+
+    return timeouts;
+  };
+
+  useEffect(() => {
+    const animationTimeouts = startTypingAnimation();
+
     return () => {
-      timeouts.forEach(clearTimeout);
+      animationTimeouts.forEach(clearTimeout);
     };
   }, []);
 
