@@ -1,6 +1,7 @@
 import React from "react";
-import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { DiGithubBadge } from "react-icons/di";
+
 
 const ContanctComponent = () => {
   return (
@@ -10,9 +11,18 @@ const ContanctComponent = () => {
           <p className="border-b-8 border-b-blue-600 rounded-xl">Contact</p>
         </div>
         <div className="flex flex-row justify-center gap-16">
-          <FaLinkedin size={52} />
-          <FaInstagram size={52} />
-          <DiGithubBadge size={52} />
+          <a href="https://www.linkedin.com/in/carlos-daniel-herrera-calero-5b13b8256/">
+            <FaLinkedin size={52} />
+          </a>
+          <a href="https://www.instagram.com/future_front_carl13/">
+            <FaInstagram size={52} />
+          </a>
+          <a href="https://github.com/carlosherrer">
+            <DiGithubBadge size={52} />
+          </a>
+          <a href="https://wa.link/d8djo6">
+            <FaWhatsapp size={52} />
+          </a>
         </div>
       </div>
     </div>
