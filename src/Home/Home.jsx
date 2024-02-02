@@ -9,11 +9,11 @@ const Home = () => {
   return (
     <div>
       <div className="w-full bg-transparent flex justify-end gap-10 p-6">
-        <p>Home</p>
-        <p>Habilidades</p>
-        <p>Projects</p>
-        <p>Experiences</p>
-        <p>Contact</p>
+        <p className="transform hover:scale-150 transition-transform">Home</p>
+        <p className="transform hover:scale-150 transition-transform">Habilidades</p>
+        <p className="transform hover:scale-150 transition-transform">Projects</p>
+        <p className="transform hover:scale-150 transition-transform">Experiences</p>
+        <p className="transform hover:scale-150 transition-transform">Contact</p>
       </div>
       <HomeComponent />
       <HabilidadesComponent />
