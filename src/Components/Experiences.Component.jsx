@@ -22,8 +22,8 @@ const ExperiencesComponent = () => {
                   selectedExperience === "Devdatep" 
                     ? "selected-experience" 
                     : ""}
-                  class="cursor-pointer text-2xl font-bold">
-                Devdatep Consulting
+                  class="cursor-pointer">
+                <p className="text-xl cursor-pointer">Devdatep Consulting</p>
               </p>
             </div>
             <div>
@@ -33,8 +33,8 @@ const ExperiencesComponent = () => {
                   selectedExperience === "Pachas" 
                     ? "selected-experience" 
                     : ""}
-                  class="cursor-pointer">
-                Pachas Parrillas
+                  >
+                <p className="text-xl cursor-pointer">Pachas Parrillas</p>
               </p>
             </div>
             <div>
@@ -44,32 +44,54 @@ const ExperiencesComponent = () => {
                   selectedExperience === "Gambusinas"
                     ? "selected-experience"
                     : ""}
-                  class="cursor-pointer">
-                Las Gambusinas
+                >
+                <p className="text-xl cursor-pointer">Las Gambusinas</p>
               </p>
             </div>
           </div>
           <div className="text-left flex flex-col gap-12">
-            {selectedExperience === "Devdatep" && <p>Texto de Devdatep</p>}
-            {selectedExperience === "Pachas" && <p>Texto de Pachas</p>}
+            {selectedExperience === "Devdatep" && 
+            <p>
+              <p>
+                <h1 className="text-lg font-bold">Co-Lider Departamento Front-End</h1>
+                <ul className="mt-6 grid gap-4 text-base list-disc">
+                  <li>Responsable de la gestión de proyectos.</li>
+                  <li>Desarrollo de proyectos de gran escala.</li>
+                  <li>Fomento de la integridad dentro del área.</li>
+                  <li>Asesoramiento en diversas áreas.</li>
+                  <li>Generación de informes detallados para respaldar la toma de decisiones estratégicas.</li>
+                </ul>
+              </p>
+            </p>}
+            {selectedExperience === "Pachas" && 
+            <p>
+              <p>
+                <h1 className="text-lg font-bold">Administración y Gestión</h1>
+                <ul className="mt-6 grid gap-4 text-base list-disc">
+                  <li>Responsable de la administración y gestión integral del restaurante, incluyendo la supervisión de empleados y la gestión de insumos.</li>
+                  <li>Encargado de llevar a cabo tareas de contabilidad, como el registro y análisis de cuentas, así como la gestión de pagos de impuestos.</li>
+                  <li>Coordinación de actividades de mantenimiento y atención al cliente para garantizar un servicio de calidad.</li>
+                </ul>
+              </p>
+            </p>}
             {selectedExperience === "Gambusinas" && 
               <p>
                 <p>
-                <h1 className="text-2xl font-bold">Desarrollador Full Stack</h1>
-                <h3 className="mt-6 grid gap-4 text-lg">
-                  <p>Lideré el diseño, desarrollo y implementación de una aplicación integral de gestión de pedidos, específicamente diseñada para optimizar las operaciones en entornos de cocina y servicios de restaurante.</p>
-                  <p>Desarrollo de la aplicación con tecnologias tales como React, React Native, TailwindCSS, ExpressJS, MongoDBAtlas y Figma</p>
-                  <p>Optimización del desarrollo usando la metodología SCRUM</p>
-                </h3>
+                <h1 className="text-lg font-bold">Desarrollador Full Stack</h1>
+                <ul className="mt-6 grid gap-4 text-base list-disc">
+                  <li>Lideré el diseño, desarrollo y implementación de una aplicación integral de gestión de pedidos, específicamente diseñada para optimizar las operaciones en entornos de cocina y servicios de restaurante.</li>
+                  <li>Desarrollo de la aplicación con tecnologias tales como React, React Native, TailwindCSS, ExpressJS, MongoDBAtlas y Figma.</li>
+                  <li>Optimización del desarrollo usando la metodología SCRUM.</li>
+                </ul>
                 </p>
                 <p>
-                <h1 className="mt-10 text-2xl font-bold">Asistente de Mesero</h1>
-                <h3 className="mt-6 grid gap-4 text-lg">
-                  <p>Atención al cliente, toma de pedidos y servicio de alimentos y bebidas.</p>
-                  <p>Preparación y disposición de mesas antes y después del servicio.</p>
-                  <p>Mantenimiento de la limpieza y orden en el área de trabajo.</p>
-                  <p>Colaboración con el equipo para garantizar una experiencia satisfactoria para el cliente</p>
-                </h3>
+                <h1 className="mt-10 text-lg font-bold">Asistente de Mesero</h1>
+                <ul className="mt-6 grid gap-4 text-base list-disc">
+                  <li>Atención al cliente, toma de pedidos y servicio de alimentos y bebidas.</li>
+                  <li>Preparación y disposición de mesas antes y después del servicio.</li>
+                  <li>Mantenimiento de la limpieza y orden en el área de trabajo.</li>
+                  <li>Colaboración con el equipo para garantizar una experiencia satisfactoria para el cliente</li>
+                </ul>
               </p>
               </p>}
           </div>
