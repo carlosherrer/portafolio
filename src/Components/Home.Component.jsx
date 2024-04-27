@@ -1,10 +1,10 @@
 import Codingbg from "../assets/codingbg.png";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 const HomeComponent = () => {
   const [displayText, setDisplayText] = useState(['', '', '']);
 
-  const startTypingAnimation = () => {
+  const startTypingAnimation = useCallback(() => {
     const typingSpeed = 90;
     const text = ['👨‍💻💁 ¡Hola!, soy', 'Carlos 😎', '<> Desarrollador Web </>'];
     const displayLines = text.map(() => ({ displayContent: '' }));
@@ -30,7 +30,7 @@ const HomeComponent = () => {
     );
 
     return timeouts;
-  };
+  }, []); // Asegúrate de incluir todas las dependencias necesarias en este array
 
   useEffect(() => {
     const animationTimeouts = startTypingAnimation();
@@ -38,7 +38,7 @@ const HomeComponent = () => {
     return () => {
       animationTimeouts.forEach(clearTimeout);
     };
-  }, []);
+  }, [startTypingAnimation]);
 
   return (
     <div className="grid grid-cols-2 mt-32 mb-20">

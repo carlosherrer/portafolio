@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useSpring, animated } from "react-spring";
+import React from 'react';
 import {
   DiReact,
   DiJsBadge,
@@ -16,78 +15,62 @@ import { TbBrandReactNative } from "react-icons/tb";
 import Codingbg from "../assets/csharp.svg";
 
 const HabilidadesComponent = () => {
-  const [toggle, setToggle] = useState(true);
-
-  const props = useSpring({
-    opacity: toggle ? 1 : 0,
-    from: { opacity: 0 },
-    config: { duration: 3000 }, // Ajusta la duración según tus preferencias
-    onRest: () => setToggle(!toggle), // Cambia el estado después de que la animación se complete
-  });
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setToggle(true);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [toggle]);
 
   return (
     <div className="flex flex-col">
       <div className="flex justify-center my-20 text-3xl">
         <p className="border-b-8 border-b-blue-600 rounded-xl">Habilidades</p>
       </div>
-      <animated.div style={props} className="grid grid-rows-4 grid-flow-col gap-20 justify-center">
-        <animated.div className="flex gap-2">
+      <div className="grid grid-rows-4 grid-flow-col gap-20 justify-center">
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <DiReact className="text-4xl" />
           <p className="mt-1">React</p>
-        </animated.div>
-        <animated.div className="flex gap-2">
+        </div>
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <TbBrandReactNative className="text-4xl" />
           <p className="mt-1">React Native</p>
-        </animated.div>
-        <animated.div className="flex gap-2">
+        </div>
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <DiJsBadge className="text-3xl" />
           <p className="mt-1">JavaScript</p>
-        </animated.div>
-        <animated.div className="flex gap-2">
+        </div>
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <DiAngularSimple className="text-3xl" />
           <p className="mt-0.5">Angular</p>
-        </animated.div>
-        <animated.div className="flex gap-2">
+        </div>
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <DiCss3Full className="text-3xl" />
           <p>CSS</p>
-        </animated.div>
-        <animated.div className="flex gap-2">
+        </div>
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <SiTailwindcss className="text-3xl" />
           <p className="mt-0.5">Tailwind</p>
-        </animated.div>
-        <animated.div className="flex mt-2 gap-2">
+        </div>
+        <div className="flex mt-2 gap-2 transform hover:scale-150 transition-transform">
           <DiJava className="text-3xl" />
           <p>Java</p>
-        </animated.div>
-        <animated.div className="flex gap-2">
+        </div>
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <img src={Codingbg} alt="icon c#" className="w-8" />
           <p className="mt-1">C#</p>
-        </animated.div>
-        <animated.div className="flex gap-2">
+        </div>
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <DiNodejsSmall className="text-3xl" />
           <p className="mt-0.5">NodeJs</p>
-        </animated.div>
-        <animated.div className="flex gap-1">
+        </div>
+        <div className="flex gap-1 transform hover:scale-150 transition-transform">
           <DiMsqlServer className="text-3xl" />
           <p className="mt-0.5">SQLServer</p>
-        </animated.div>
-        <animated.div className="flex gap-1">
+        </div>
+        <div className="flex gap-1 transform hover:scale-150 transition-transform">
           <DiMongodb className="text-3xl" />
           <p className="mt-0.5">MongoDB</p>
-        </animated.div>
-        <animated.div className="flex gap-2">
+        </div>
+        <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <DiGithubBadge className="text-3xl" />
           <p className="mt-0.5">GitHub</p>
-        </animated.div>
-      </animated.div>
+        </div>
+      </div>
     </div>
   );
 };
