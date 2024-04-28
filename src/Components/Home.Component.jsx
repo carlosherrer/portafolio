@@ -24,13 +24,13 @@ const HomeComponent = () => {
 
     timeouts.push(
       setTimeout(() => {
-        setDisplayText(['', '', '', '', '', '']); // Reiniciar el texto después de un intervalo
-        startTypingAnimation(); // Iniciar la animación nuevamente
-      }, typingSpeed * text.reduce((acc, line) => acc + line.length, 0) + 1000) // Intervalo de 1 segundo después de completar la animación
+        setDisplayText(['', '', '', '', '', '']);
+        startTypingAnimation();
+      }, typingSpeed * text.reduce((acc, line) => acc + line.length, 0) + 1000)
     );
 
     return timeouts;
-  }, []); // Asegúrate de incluir todas las dependencias necesarias en este array
+  }, []); 
 
   useEffect(() => {
     const animationTimeouts = startTypingAnimation();
@@ -41,7 +41,7 @@ const HomeComponent = () => {
   }, [startTypingAnimation]);
 
   return (
-    <div className="grid grid-cols-2 mt-32 mb-20">
+    <div className="grid md:grid-cols-2 grid-rows-2 mt-32 mb-20">
       <div className="mt-24 text-end grid">
         <p className="text-4xl -mb-6" dangerouslySetInnerHTML={{ __html: displayText[0] }}></p>
         <p className="font-bold text-5xl -mb-6" dangerouslySetInnerHTML={{ __html: displayText[1] }}></p>
