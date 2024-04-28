@@ -41,8 +41,8 @@ const HomeComponent = () => {
   }, [startTypingAnimation]);
 
   return (
-    <div className="grid md:grid-cols-2 grid-rows-2 mt-32">
-      <div className="mt-24 text-end grid">
+    <div className="grid md:grid-cols-2 grid-rows-2 md:mt-32">
+      <div className="mt-24 md:text-end text-center grid">
         <p className="text-4xl -mb-6" dangerouslySetInnerHTML={{ __html: displayText[0] }}></p>
         <p className="font-bold text-5xl -mb-6" dangerouslySetInnerHTML={{ __html: displayText[1] }}></p>
         <p className="text-green-500 text-4xl" dangerouslySetInnerHTML={{ __html: displayText[2] }}></p>

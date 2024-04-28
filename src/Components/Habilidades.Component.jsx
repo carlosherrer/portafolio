@@ -21,7 +21,7 @@ const HabilidadesComponent = () => {
       <div className="flex justify-center my-10 text-3xl">
         <p className="border-b-8 border-b-blue-600 rounded-xl">Habilidades</p>
       </div>
-      <div className="grid grid-rows-4 grid-flow-col mt-10 gap-8 md:gap-20 justify-center">
+      <div className="grid grid-rows-4 grid-flow-col mt-10 gap-8 md:gap-28 justify-center">
         <div className="flex gap-2 transform hover:scale-150 transition-transform">
           <DiReact className="text-4xl" />
           <p className="mt-1">React</p>

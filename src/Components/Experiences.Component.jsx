@@ -13,8 +13,8 @@ const ExperiencesComponent = () => {
         <div className="flex justify-center my-20 text-3xl">
           <p className="border-b-8 border-b-blue-600 rounded-xl">Experiences</p>
         </div>
-        <div className="grid grid-cols-2 gap-20">
-          <div className="flex flex-col text-right gap-20">
+        <div className="grid grid-cols-2 gap-6 md:gap-20">
+          <div className="flex flex-col text-center md:text-right gap-20">
             <div>
               <p
                 onClick={() => handleExperienceClick("Devdatep")}
@@ -49,12 +49,12 @@ const ExperiencesComponent = () => {
               </p>
             </div>
           </div>
-          <div className="text-left flex flex-col gap-12">
+          <div className="text-left flex flex-col gap-20">
             {selectedExperience === "Devdatep" && 
             <p>
               <p>
-                <h1 className="text-lg font-bold">Co-Lider Departamento Front-End</h1>
-                <ul className="mt-6 grid gap-4 text-base list-disc pl-10">
+                <h1 className="text-lg font-bold">Co-Lider Area Front-End</h1>
+                <ul className="mt-6 grid gap-4 text-base list-disc md:pl-10 pl-6">
                   <li>Responsable de la gestión de proyectos.</li>
                   <li>Desarrollo de proyectos de gran escala.</li>
                   <li>Fomento de la integridad dentro del área.</li>
@@ -67,7 +67,7 @@ const ExperiencesComponent = () => {
             <p>
               <p>
                 <h1 className="text-lg font-bold">Administración y Gestión</h1>
-                <ul className="mt-6 grid gap-4 text-base list-disc pl-10">
+                <ul className="mt-6 grid gap-4 text-base list-disc md:pl-10 pl-6">
                   <li>Responsable de la administración y gestión integral del restaurante, incluyendo la supervisión de empleados y la gestión de insumos.</li>
                   <li>Encargado de llevar a cabo tareas de contabilidad, como el registro y análisis de cuentas, así como la gestión de pagos de impuestos.</li>
                   <li>Coordinación de actividades de mantenimiento y atención al cliente para garantizar un servicio de calidad.</li>
@@ -78,7 +78,7 @@ const ExperiencesComponent = () => {
               <p>
                 <p>
                 <h1 className="text-lg font-bold">Desarrollador Full Stack</h1>
-                <ul className="mt-6 grid gap-4 text-base list-disc pl-10">
+                <ul className="mt-6 grid gap-4 text-base list-disc md:pl-10 pl-6">
                   <li>Lideré el diseño, desarrollo y implementación de una aplicación integral de gestión de pedidos, específicamente diseñada para optimizar las operaciones en entornos de cocina y servicios de restaurante.</li>
                   <li>Desarrollo de la aplicación con tecnologias tales como React, React Native, TailwindCSS, ExpressJS, MongoDBAtlas y Figma.</li>
                   <li>Optimización del desarrollo usando la metodología SCRUM.</li>
@@ -86,7 +86,7 @@ const ExperiencesComponent = () => {
                 </p>
                 <p>
                 <h1 className="mt-10 text-lg font-bold">Asistente de Mesero</h1>
-                <ul className="mt-6 grid gap-4 text-base list-disc pl-10">
+                <ul className="mt-6 grid gap-4 text-base list-disc md:pl-10 pl-6">
                   <li>Atención al cliente, toma de pedidos y servicio de alimentos y bebidas.</li>
                   <li>Preparación y disposición de mesas antes y después del servicio.</li>
                   <li>Mantenimiento de la limpieza y orden en el área de trabajo.</li>
